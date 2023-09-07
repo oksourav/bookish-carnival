@@ -1,0 +1,19 @@
+{% from 'macros.html' import aboutUs, head %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("User Dashboard") }}
+  </head>
+  <body>
+    <h1>Welcome, User!</h1>
+    <p>Explore the dashboard:</p>
+    <ul>
+      <li><a href="files.html">View Files</a></li>
+      <li><a href="profile.html">View Profile</a></li>
+    </ul>
+    <p>Hint: Two flags are hidden in this dashboard.</p>
+    {{ aboutUs() }}
+    <script src="{{ url_for('static',filename='js/dashboard.js') }}"></script>
+  </body>
+</html>

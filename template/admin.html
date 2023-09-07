@@ -1,0 +1,46 @@
+{% from 'macros.html' import aboutUs, head, pageLink %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("Admin Panel") }}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <fieldset>
+          {{ pageLink() }}
+
+          <legend>
+            Hola! 🛠️👩 You have access to the Admin panel. Let the games
+            continue! 🎮 🚀
+          </legend>
+          <p>As an admin, you have access to:</p>
+
+          <ul class="nav" style="margin-bottom: 20px">
+            <!-- <li class="nav-item">
+              <a href="{{ url_for('viewFile') }}" class="nav-link"
+                >View Files</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('profile') }}"
+                >View Profile</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('getAdminFlag') }}"
+                >View Admin-Only Flag</a
+              >
+            </li>
+          </ul>
+
+          <!-- <div class="alert alert-primary" role="alert">
+            Hint: 🚩 The final flag awaits you! 🕵️‍♂️🔍
+          </div> -->
+        </fieldset>
+      </div>
+    </div>
+
+    {{ aboutUs() }}
+  </body>
+</html>

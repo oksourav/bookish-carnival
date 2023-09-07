@@ -1,0 +1,17 @@
+{% from 'macros.html' import aboutUs, head %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("Unauthorised Access") }}
+  </head>
+
+  <body>
+    <h1 style="text-align: center; color: red">
+      Oops! It seems you're attempting the forbidden dance of unauthorized
+      communication.<br />
+      🚫 We appreciate your rebellious spirit.
+    </h1>
+    {{ aboutUs() }}
+  </body>
+</html>

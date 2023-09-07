@@ -1,0 +1,39 @@
+{% from 'macros.html' import aboutUs, head, pageLink %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("File Explorer") }}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <fieldset>
+          {{ pageLink() }}
+
+          <legend>File Explorer 📂 🔍</legend>
+
+          <p>List of Files:</p>
+
+          <ul class="nav" style="margin-bottom: 20px">
+            <li class="nav-item">
+              <a href="flagfile.txt" class="nav-link">flagfile.txt</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">otherfile1.txt</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">otherfile2.txt</a>
+            </li>
+          </ul>
+
+          <div class="alert alert-primary" role="alert">
+            Hint: 🕵️‍♂️ One of these files contains a flag! 🚩 🔎
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    {{ aboutUs() }}
+    <script src="{{ url_for('static',filename='js/files.js') }}"></script>
+  </body>
+</html>

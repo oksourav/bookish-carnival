@@ -1,0 +1,27 @@
+{% from 'macros.html' import aboutUs, head, pageLink %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("Admin-Only Flag") }}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <fieldset>
+          {{ pageLink() }}
+          <legend>Admin-Only Flag 🔐</legend>
+          <p>
+            Congratulations! 🎉 You've successfully discovered the admin-only
+            flag: 🚩
+          </p>
+
+          <div class="alert alert-success" role="alert">
+            <strong>techno{2023_found}</strong>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    {{ aboutUs() }}
+  </body>
+</html>

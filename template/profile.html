@@ -1,0 +1,50 @@
+{% from 'macros.html' import aboutUs, head, pageLink %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ head("User Profile") }}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <fieldset>
+          {{ pageLink() }}
+
+          <legend>View your profile information:</legend>
+
+          <nav class="navbar bg-body-tertiary" style="margin: 10px 0">
+            <div class="container-fluid"><strong>Username:</strong> admin</div>
+          </nav>
+
+          <nav class="navbar bg-body-tertiary" style="margin: 10px 0">
+            <div class="container-fluid">
+              <strong>Email:</strong> admin@example.com
+            </div>
+          </nav>
+
+          <nav class="navbar bg-body-tertiary" style="margin: 10px 0">
+            <div class="container-fluid"><strong>Role:</strong> User</div>
+          </nav>
+
+          <button
+            id="upgradeBtn"
+            class="btn btn-secondary"
+            style="margin: 20px 0"
+          >
+            Upgrade to Admin
+          </button>
+
+          <div class="alert alert-primary" role="alert">
+            Hint: 🚀 Unlock admin access to unveil the third flag's secret! 🕵️‍♂️
+            🔑 🚪
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    {{ aboutUs() }}
+
+    <script src="{{ url_for('static',filename='js/profile.js') }}"></script>
+  </body>
+</html>
